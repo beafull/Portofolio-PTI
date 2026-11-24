@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="id" data-bs-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portofolio personal Lizh - Mahasiswa Teknologi Informasi & Web Developer">
+    <title>Lizh | Portofolio Mahasiswa TI</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap 5.3 CSS & Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS Kustom -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Efek global: progress scroll & cahaya kursor -->
+    <div id="scrollProgress" aria-hidden="true"></div>
+    <div id="cursorGlow" aria-hidden="true"></div>
+
+    <!-- 1. Header & Navigasi -->
+    <header>
+        <nav class="navbar navbar-expand-lg sticky-top py-3 glass-nav">
+            <div class="container">
+                <a class="navbar-brand fw-bold text-primary" href="#hero">
+                    <i class="bi bi-code-slash"></i> Lizh<span class="text-body">.</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#menuNav" aria-controls="menuNav"
+                        aria-expanded="false" aria-label="Buka menu navigasi">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menuNav">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-lg-2">
+                        <li class="nav-item"><a class="nav-link" href="#hero">Beranda</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#about">Tentang</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills">Keahlian</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Proyek</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#creative">Kreatif</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#journey">Perjalanan</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
+                    </ul>
+                    <button id="btnTema" class="btn btn-outline-primary btn-sm ms-lg-3 mt-2 mt-lg-0" type="button">
+                        <i id="iconTema" class="bi bi-moon-fill me-1"></i>
+                        <span id="teksTema">Dark Mode</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- 2. Hero Section -->
+        <section id="hero" class="hero-section">
+            <!-- dekorasi latar -->
+            <div class="blob blob-1" aria-hidden="true"></div>
+            <div class="blob blob-2" aria-hidden="true"></div>
+            <div class="blob blob-3" aria-hidden="true"></div>
+            <div class="sparkles" id="sparkles" aria-hidden="true"></div>
+
+            <div class="container position-relative">
+                <div class="row align-items-center gy-5">
+                    <div class="col-lg-7 order-2 order-lg-1 text-center text-lg-start">
+                        <span class="badge rounded-pill text-bg-primary mb-3 px-3 py-2 hero-pop" style="--d:0s">
+                            <i class="bi bi-mortarboard-fill me-1"></i> Mahasiswa Sistem Informasi
+                        </span>
+                        <h1 class="display-4 fw-bold hero-pop" style="--d:.12s">Halo, saya <span class="text-gradient">Galizh</span> <span class="wave" aria-hidden="true">👋</span></h1>
+                        <p class="lead mb-4 hero-pop" style="--d:.24s">
+                            Saya seorang Mahasiswa Sistem Informasi<span id="typing" class="fw-semibold text-primary"></span><span class="cursor">|</span>
+                        </p>
+                        <p class="text-body-secondary mb-4 hero-pop" style="--d:.36s">
+                            Antusias membangun website yang rapi, responsif, dan nyaman digunakan.
+                            Saat ini sedang memperdalam Python, HTML5, Bootstrap 5, dan JavaScript.
+                        </p>
+                        <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start hero-pop" style="--d:.48s">
+                            <a href="#projects" class="btn btn-primary btn-lg px-4 btn-shine">Lihat Proyek</a>
+                            <a href="#contact" class="btn btn-outline-primary btn-lg px-4">Hubungi Saya</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 order-1 order-lg-2">
+                        <div class="avatar-wrap">
+                            <div class="avatar-ring" aria-hidden="true"></div>
+                            <img src="avatar.img/foto1.jpg" alt="Foto profil Lizh" class="avatar-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="#about" class="scroll-hint" aria-label="Gulir ke bawah"><i class="bi bi-chevron-double-down"></i></a>
+        </section>
+
+        <!-- Marquee -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <span>Web Development</span><span>✦</span><span>UI/UX</span><span>✦</span><span>Python</span><span>✦</span><span>Figma</span><span>✦</span><span>JavaScript</span><span>✦</span><span>Bootstrap 5</span><span>✦</span>
+                <span>Web Development</span><span>✦</span><span>UI/UX</span><span>✦</span><span>Python</span><span>✦</span><span>Figma</span><span>✦</span><span>JavaScript</span><span>✦</span><span>Bootstrap 5</span><span>✦</span>
+            </div>
+        </div>
+
+        <!-- 3. Tentang Diri -->
+        <section id="about" class="py-5">
+            <div class="container py-4">
+                <h2 class="section-title text-center" data-reveal>Tentang Saya</h2>
+                <div class="row align-items-center g-4 justify-content-center">
+                    <div class="col-lg-7" data-reveal="left">
+                        <p>
+                            Saya Galizh, atau kerap dipanggil Lizh. Saya seorang mahasiswa program studi Sistem Informasi yang tertarik pada
+                            <strong>Web Development</strong> dan <strong>UI/UX</strong>. Perjalanan saya dimulai dari rasa
+                            penasaran melihat bagaimana sebuah halaman web dibuat, dan bagaimana sebuah bisnis dapat memanfaatkan teknologi informasi semaksimal mungkin
+                        </p>
+                        <p>
+                            Saya senang belajar hal baru, dan percaya bahwa website yang baik
+                            adalah yang mudah dipakai di perangkat apa pun. Target saya ke depan adalah magang
+                            sebagai front-end developer.
+                        </p>
+                    </div>
+                    <div class="col-lg-5" data-reveal="right">
+                        <ul class="list-group shadow-sm about-list">
+                            <li class="list-group-item"><i class="bi bi-person-badge text-primary me-2"></i><strong>Nama:</strong> Galizh Deandra Rizky</li>
+                            <li class="list-group-item"><i class="bi bi-card-text text-primary me-2"></i><strong>NIM:</strong> 682026003</li>
+                            <li class="list-group-item"><i class="bi bi-building text-primary me-2"></i><strong>Kampus:</strong> Universitas Kristen Satya Wacana</li>
+                            <li class="list-group-item"><i class="bi bi-bullseye text-primary me-2"></i><strong>Fokus:</strong> Web Development &amp; UI/UX</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Riwayat Pendidikan & Organisasi -->
+        <section id="education" class="py-5">
+            <div class="container py-4">
+                <h2 class="section-title text-center" data-reveal>Pendidikan &amp; Organisasi</h2>
+
+                <div class="row g-5 justify-content-center">
+                    <!-- Pendidikan -->
+                    <div class="col-lg-6" data-reveal="left">
+                        <h3 class="h5 fw-semibold mb-4 text-primary">
+                            <i class="bi bi-mortarboard-fill me-2"></i>Riwayat Pendidikan
+                        </h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <span class="timeline-dot"></span>
+                                <small class="text-body-secondary">2026 pertengahan - Sekarang</small>
+                                <h4 class="h6 fw-semibold mb-1">S1 Sistem Informasi</h4>
+                                <p class="mb-0">Universitas Kristen Satya Wacana</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-dot"></span>
+                                <small class="text-body-secondary">2023 - 2026 awal</small>
+                                <h4 class="h6 fw-semibold mb-1">SMA Jurusan IPA (Teknik Murni)</h4>
+                                <p class="mb-0">SMA NEGERI 2 SALATIGA</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Organisasi -->
+                    <div class="col-lg-6" data-reveal="right">
+                        <h3 class="h5 fw-semibold mb-4 text-primary">
+                            <i class="bi bi-people-fill me-2"></i>Pengalaman Organisasi
+                        </h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <span class="timeline-dot"></span>
+                                <small class="text-body-secondary">2023 akhir - 2024 akhir</small>
+                                <h4 class="h6 fw-semibold mb-1">Anggota Osis Sekbid Hak Asasi Masyarakat (HAM)</h4>
+                                <p class="mb-0">SMA NEGERI 2 SALATIGA</p>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-dot"></span>
+                                <small class="text-body-secondary">2025 awal - 2026 awal</small>
+                                <h4 class="h6 fw-semibold mb-1">Ketua Sekbid Kualitas Jasmani, Kesehatan dan Gizi </h4>
+                                <p class="mb-0">SMA NEGERI 2 SALATIGA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Keahlian -->
+        <section id="skills" class="py-5 bg-body-tertiary">
+            <div class="container py-4">
+                <h2 class="section-title text-center" data-reveal>Keahlian</h2>
+                <div class="row g-3 g-md-4 row-cols-2 row-cols-md-3 row-cols-lg-6">
+                    <div class="col" data-reveal style="--i:0"><div class="skill-card tilt"><i class="bi bi-filetype-html"></i><h3>HTML5</h3><div class="progress"><div class="progress-bar" data-level="60"></div></div><span class="skill-pct" data-count="60">0%</span></div></div>
+                    <div class="col" data-reveal style="--i:1"><div class="skill-card tilt"><i class="bi bi-filetype-css"></i><h3>CSS3</h3><div class="progress"><div class="progress-bar" data-level="60"></div></div><span class="skill-pct" data-count="60">0%</span></div></div>
+                    <div class="col" data-reveal style="--i:2"><div class="skill-card tilt"><i class="bi bi-filetype-py"></i><h3>Python</h3><div class="progress"><div class="progress-bar" data-level="75"></div></div><span class="skill-pct" data-count="75">0%</span></div></div>
+                    <div class="col" data-reveal style="--i:3"><div class="skill-card tilt"><i class="bi bi-filetype-js"></i><h3>JavaScript</h3><div class="progress"><div class="progress-bar" data-level="45"></div></div><span class="skill-pct" data-count="45">0%</span></div></div>
+                    <div class="col" data-reveal style="--i:4"><div class="skill-card tilt"><i class="bi bi-palette"></i><h3>Figma</h3><div class="progress"><div class="progress-bar" data-level="85"></div></div><span class="skill-pct" data-count="85">0%</span></div></div>
+                </div>
+                <div class="text-center mt-4" data-reveal>
+                    <span class="badge rounded-pill text-bg-secondary m-1 px-3 py-2 soft-badge">Problem Solving</span>
+                    <span class="badge rounded-pill text-bg-secondary m-1 px-3 py-2 soft-badge">Kerja Tim</span>
+                    <span class="badge rounded-pill text-bg-secondary m-1 px-3 py-2 soft-badge">Manajemen Waktu</span>
+                    <span class="badge rounded-pill text-bg-secondary m-1 px-3 py-2 soft-badge">Komunikasi</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Galeri Proyek -->
+        <section id="projects" class="py-5">
+            <div class="container py-4">
+                <h2 class="section-title text-center" data-reveal>Galeri Proyek</h2>
+                <div class="row g-4">
+
+                    <div class="col-12 col-md-6 col-lg-4" data-reveal style="--i:0">
+                        <div class="card h-100 project-card shadow-sm tilt">
+                            <div class="card-img-wrap">
+                                <img src="avatar.img/foto2.jpg" class="card-img-top" alt="Pratinjau Design Figma">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Figma</h3>
+                                <p class="card-text text-body-secondary">Design Figma yang saya buat sendiri. Fokus pada tata letak yang rapi di ponsel hingga desktop, namun tetap memiliki tampilan menarik yang harapannya dapat membuat konsumen merasa senang dengan hasil design saya</p>
+                                <div class="mb-3">
+                                    <span class="badge text-bg-primary">FIGMA</span>
+                                    <span class="badge text-bg-primary">UI/UX</span>
+                                </div>
+                                <a href="https://www.figma.com/proto/HZCOZBeKNcuheowIHyz9sl/T5Figma_PTI-A_682026003?page-id=0%3A1&node-id=3-3165&viewport=285%2C1042%2C0.3&t=qyJKyyYgwSd89B9E-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=3%3A3165" target="_blank" rel="noopener" class="btn btn-outline-primary mt-auto">Kunjungi Figma <i class="bi bi-arrow-up-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4" data-reveal style="--i:1">
+                        <div class="card h-100 project-card shadow-sm tilt">
+                            <div class="card-img-wrap">
+                                <img src="avatar.img/foto4.jpg" class="card-img-top" alt="Pratinjau Project Aplikasi Laundry">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Aplikasi Laundry</h3>
+                                <p class="card-text text-body-secondary">Aplikasi yang diharapkan dapat membantu fleksibelitas dalam usaha laundry. Project ini masih terus dikembangkan, dan akan terus di usahakan untuk berkembang jadi lebih baik lagi</p>
+                                <div class="mb-3">
+                                    <span class="badge text-bg-primary">PYTHON</span>
+                                </div>
+                                <a href="https://github.com/RothtalyorEdward1/Sistem-Manajemen-Laundry.git" class="btn btn-outline-primary mt-auto">Lihat Demo <i class="bi bi-arrow-up-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 col-lg-4" data-reveal style="--i:2">
+                        <div class="card h-100 project-card shadow-sm tilt">
+                            <div class="card-img-wrap">
+                                <img src="avatar.img/foto3.jpg" class="card-img-top" alt="Pratinjau Worldpress">
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h3 class="card-title h5">Desain WorldPress</h3>
+                                <p class="card-text text-body-secondary">Membuat design WorldPress yang saat ini masih dalam proses belajar dan akan terus belajar</p>
+                                <div class="mb-3">
+                                    <span class="badge text-bg-primary">UI/UX</span>
+                                </div>
+                                <a href="https://lizh70.wordpress.com/"target="_blank" rel="noopener" class="btn btn-outline-primary mt-auto">Kunjungi WorldPress <i class="bi bi-arrow-up-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <!-- 6. Perjalanan Belajar (Quotes) + Fun Fact -->
+        <section id="journey" class="py-5 bg-body-tertiary">
+            <div class="container py-4">
+                <h2 class="section-title text-center" data-reveal>Motivasi Belajar</h2>
+
+                <div class="row g-4 justify-content-center">
+                    <div class="col-md-6 col-lg-4" data-reveal style="--i:0">
+                        <figure class="quote-card tilt">
+                            <blockquote>
+                                <p>Ingin membanggakan OrangTua dan Kakak</p>
+                            </blockquote>
+                            <p class="card-text text-body-secondary">Ingin belajar dengan giat agar dapat meraih cita-cita untuk membuat OrangTua dan Kakak bangga atas apa yang akan aku capai dari usaha mereka untuk memberi pendidikan terbaik untuk aku.</p>
+                        </figure>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-reveal style="--i:1">
+                        <figure class="quote-card tilt">
+                            <blockquote>
+                                <p>Membuka Achievement Masa Depan</p>
+                            </blockquote>
+                            <p class="card-text text-body-secondary">Aku ingin menjadikan pendidikan sebagai salah satu cara untuk membuka achievement terbaik dalam hidup, karena kesuksesan nggak bisa didapat hanya dengan login dan selesaiin archon quest tiap hari.</p>
+                        </figure>
+                    </div>
+                    <div class="col-md-6 col-lg-4" data-reveal style="--i:2">
+                        <figure class="quote-card tilt">
+                            <blockquote>
+                                <p>Explore More, Worry Less.</p>
+                            </blockquote>
+                            <p class="card-text text-body-secondary">I believe life is an adventure. Aku ingin mengumpulkan banyak pengalaman, belajar skill baru, dan discover something unexpected along the way. Basically, just keep growing and enjoy the process.</p>
+                        </figure>
+                    </div>
+                </div>
+        <!-- ===== CREATIVE SECTION: Musik & Game ===== -->
+        <section id="creative" class="py-5 creative-section">
+            <div class="container py-4 position-relative">
+                <h2 class="section-title text-center" data-reveal>Creative Corner</h2>
+                <p class="text-center text-body-secondary mb-5" data-reveal>Hal-hal yang saya pusatkan sebagai tempat hiburan, yaitu Musik dan Game.</p>
+
+                <!-- Musik -->
+                <div class="creative-head" data-reveal>
+                    <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+                    <h3 class="h4 fw-semibold mb-0">Lagu Favorit</h3>
+                </div>
+
+                <div class="row g-4 mb-5">
+                    <!-- Lagu 1 -->
+                    <div class="col-lg-6" data-reveal="left">
+                        <div class="music-card tilt">
+                            <div class="music-top">
+                                <div class="vinyl" aria-hidden="true"><span></span></div>
+                                <div>
+                                    <small class="music-label">Sedang diputar</small>
+                                    <h4 class="h5 mb-0">Sk8er Boi</h4>
+                                    <small class="text-body-secondary">Avril Lavigne</small>
+                                </div>
+                            </div>
+                            <iframe class="music-embed" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+                                    frameborder="0" height="175" loading="lazy"
+                                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+                                    src="https://embed.music.apple.com/id/album/sk8er-boi/315025768?i=315025826"
+                                    title="Sk8er Boi di Apple Music"></iframe>
+                            <a href="https://music.apple.com/id/album/sk8er-boi/315025768?i=315025826" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm mt-3"><i class="bi bi-apple me-1"></i> Buka di Apple Music</a>
+                        </div>
+                    </div>
+
+                    <!-- Lagu 2 -->
+                    <div class="col-lg-6" data-reveal="right">
+                        <div class="music-card tilt">
+                            <div class="music-top">
+                                <div class="vinyl vinyl-red" aria-hidden="true"><span></span></div>
+                                <div>
+                                    <small class="music-label">Sedang diputar</small>
+                                    <h4 class="h5 mb-0">Red (Taylor's Version)</h4>
+                                    <small class="text-body-secondary">Taylor Swift</small>
+                                </div>
+                            </div>
+                            <iframe class="music-embed" allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+                                    frameborder="0" height="175" loading="lazy"
+                                    sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+                                    src="https://embed.music.apple.com/id/album/red-taylors-version/1590368275?i=1590368279"
+                                    title="Red (Taylor's Version) di Apple Music"></iframe>
+                            <a href="https://music.apple.com/id/album/red-taylors-version/1590368275?i=1590368279" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm mt-3"><i class="bi bi-apple me-1"></i> Buka di Apple Music</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game -->
+<div class="creative-head" data-reveal>
+    <span class="creative-icon"><i class="bi bi-controller"></i></span>
+    <h3 class="h4 fw-semibold mb-0">Game Favorit</h3>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-lg-10" data-reveal="zoom">
+        <div class="genshin-card tilt">
+            <div class="genshin-stars" aria-hidden="true"></div>
+
+            <!-- Pemandangan dunia fantasi (samar) -->
+            <div class="teyvat-scene" aria-hidden="true">
+                <svg viewBox="0 0 1000 420" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="fallFade" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0" stop-color="#fff" stop-opacity=".45"/>
+                            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+                        </linearGradient>
+                        <linearGradient id="seaFade" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0" stop-color="#fff" stop-opacity=".16"/>
+                            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+                        </linearGradient>
+                    </defs>
+
+                    <!-- rasi bintang -->
+                    <g stroke="#fff" stroke-opacity=".35" stroke-width="1" fill="none">
+                        <polyline points="90,60 160,95 230,70 300,120 380,90"/>
+                        <polyline points="640,45 710,85 780,55 850,100 925,70"/>
+                    </g>
+                    <g fill="#fff" class="const-stars">
+                        <circle cx="90" cy="60" r="2.5"/><circle cx="160" cy="95" r="2"/><circle cx="230" cy="70" r="3"/>
+                        <circle cx="300" cy="120" r="2"/><circle cx="380" cy="90" r="2.5"/>
+                        <circle cx="640" cy="45" r="2.5"/><circle cx="710" cy="85" r="2"/><circle cx="780" cy="55" r="3"/>
+                        <circle cx="850" cy="100" r="2"/><circle cx="925" cy="70" r="2.5"/>
+                    </g>
+
+                    <!-- gunung jauh -->
+                    <path d="M0 330 L90 250 L150 290 L240 205 L330 300 L420 240 L520 312 L610 228 L710 305 L800 242 L900 300 L1000 252 L1000 420 L0 420Z" fill="#fff" fill-opacity=".07"/>
+
+                    <!-- awan -->
+                    <g class="cloud" fill="#fff" fill-opacity=".1">
+                        <ellipse cx="120" cy="215" rx="80" ry="12"/><ellipse cx="165" cy="206" rx="50" ry="11"/>
+                        <ellipse cx="560" cy="250" rx="95" ry="12"/><ellipse cx="615" cy="240" rx="55" ry="11"/>
+                        <ellipse cx="900" cy="200" rx="70" ry="10"/>
+                    </g>
+
+                    <!-- pulau melayang -->
+                    <g transform="translate(170 150) scale(.9)"><g class="isle" style="--dl:0s">
+                        <path d="M-60 0 L60 0 L36 28 L10 62 L-6 38 L-32 24Z" fill="#fff" fill-opacity=".14"/>
+                        <path d="M-60 0 Q-30 -16 0 -14 Q36 -18 60 0Z" fill="#fff" fill-opacity=".24"/>
+                        <path d="M-28 -12 L-20 -34 L-12 -12Z M-4 -14 L6 -40 L16 -14Z" fill="#fff" fill-opacity=".26"/>
+                    </g></g>
+
+                    <g transform="translate(520 105) scale(1.25)"><g class="isle" style="--dl:-2s">
+                        <rect x="-3" y="30" width="7" height="170" fill="url(#fallFade)"/>
+                        <path d="M-60 0 L60 0 L38 30 L12 66 L-4 40 L-34 26Z" fill="#fff" fill-opacity=".14"/>
+                        <path d="M-60 0 Q-30 -16 0 -14 Q36 -18 60 0Z" fill="#fff" fill-opacity=".26"/>
+                        <path d="M-10 -14 L-10 -46 L0 -58 L10 -46 L10 -14Z" fill="#fff" fill-opacity=".28"/>
+                        <path d="M-16 -46 L0 -66 L16 -46Z" fill="#fff" fill-opacity=".34"/>
+                    </g></g>
+
+                    <g transform="translate(830 175) scale(.7)"><g class="isle" style="--dl:-4s">
+                        <path d="M-60 0 L60 0 L36 28 L10 62 L-6 38 L-32 24Z" fill="#fff" fill-opacity=".14"/>
+                        <path d="M-60 0 Q-30 -16 0 -14 Q36 -18 60 0Z" fill="#fff" fill-opacity=".24"/>
+                        <path d="M10 -14 L20 -38 L30 -14Z" fill="#fff" fill-opacity=".26"/>
+                    </g></g>
+
+                    <!-- gunung dekat -->
+                    <path d="M0 360 L70 300 L130 335 L210 270 L300 345 L390 285 L470 350 L560 295 L660 352 L750 280 L850 345 L930 300 L1000 340 L1000 420 L0 420Z" fill="#fff" fill-opacity=".12"/>
+
+                    <!-- laut -->
+                    <rect x="0" y="360" width="1000" height="60" fill="url(#seaFade)"/>
+                    <g fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round">
+                        <path class="wave" stroke-opacity=".28" d="M-200 378 q50 -12 100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0"/>
+                        <path class="wave w2" stroke-opacity=".2" d="M-200 396 q50 -12 100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0 t100 0"/>
+                    </g>
+                </svg>
+
+                <!-- tujuh orb elemen yang melayang -->
+                <span class="elem-orb" style="--c:#ef7938; --x:8%;  --y:62%; --dl:0s"></span>
+                <span class="elem-orb" style="--c:#33ccff; --x:24%; --y:22%; --dl:-1s"></span>
+                <span class="elem-orb" style="--c:#74c2a8; --x:41%; --y:70%; --dl:-2s"></span>
+                <span class="elem-orb" style="--c:#b362f2; --x:58%; --y:18%; --dl:-3s"></span>
+                <span class="elem-orb" style="--c:#a5c83b; --x:73%; --y:66%; --dl:-4s"></span>
+                <span class="elem-orb" style="--c:#9fd6e3; --x:88%; --y:30%; --dl:-5s"></span>
+                <span class="elem-orb" style="--c:#fab632; --x:95%; --y:74%; --dl:-6s"></span>
+            </div>
+
+            <div class="genshin-compass" aria-hidden="true"><i class="bi bi-stars"></i></div>
+            <div class="row align-items-center g-4 position-relative">
+                <div class="col-md-8">
+                    <span class="fact-label"><i class="bi bi-controller me-1"></i>Open World RPG</span>
+                    <h3 class="display-6 fw-bold mb-2">Genshin Impact</h3>
+                    <p class="mb-3 genshin-text">
+                        Dunia Teyvat yang luas selalu jadi tempat pelarian favorit saya: menjelajah, ngejar archon quest,
+                        dan menikmati musik serta desain visualnya.
+                    </p>
+                    <div class="mb-4">
+                                        <span class="badge rounded-pill genshin-chip">Teyvat</span>
+                                        <span class="badge rounded-pill genshin-chip">Archon Quest</span>
+                                        <span class="badge rounded-pill genshin-chip">Explorer</span>
+                                    </div>
+                                    <a id="linkGenshin" href="https://act.hoyolab.com/app/community-game-records-sea/index.html?bbs_presentation_style=fullscreen&bbs_auth_required=true&gid=2&user_id=335127338&utm_source=share&utm_medium=link&lang=en-us&bbs_theme=dark&bbs_theme_device=1&utm_campaign=web#/ys" target="_blank" rel="noopener" class="btn btn-light btn-lg px-4 btn-shine">
+                                        <i class="bi bi-box-arrow-up-right me-1"></i> Kunjungi Genshin
+                                    </a>
+                                </div>
+                                <div class="col-md-4 text-center d-none d-md-block">
+                                    <div class="primogem" aria-hidden="true"><i class="bi bi-gem"></i></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+                <!-- Fakta acak -->
+                <div class="row justify-content-center mt-5">
+                    <div class="col-lg-8" data-reveal="zoom">
+                        <div class="fact-quote text-center">
+                            <span class="fact-label"><i class="bi bi-stars me-1"></i>Fakta Tentang Saya</span>
+                            <p id="teksFakta">Klik tombol di bawah untuk melihat fakta unik.</p>
+                            <button id="btnFakta" class="btn btn-primary btn-shine" type="button">
+                                <i class="bi bi-shuffle me-1"></i> Fakta Acak Tentang Saya
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontak -->
+        <section id="contact" class="py-5">
+            <div class="container py-4">
+                <h2 class="section-title text-center" data-reveal>Hubungi Saya</h2>
+                <p class="text-center text-body-secondary mb-4" data-reveal>Punya pertanyaan atau kritik dan saran? Kirim pesan lewat form berikut.</p>
+                <div class="row justify-content-center">
+                    <div class="col-md-8 col-lg-6" data-reveal="zoom">
+                        <form id="formKontak" class="needs-validation contact-form" action="https://formspree.io/f/xeaglkaz" method="POST" novalidate>
+                            <div class="mb-3">
+                                <label for="nama" class="form-label">Nama</label>
+                                <input type="text" class="form-control" id="nama" name="nama" placeholder="Nama Anda" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email Anda" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="pesan" class="form-label">Pesan</label>
+                                <textarea class="form-control" id="pesan" name="pesan" rows="5" placeholder="Pesan Anda" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 btn-shine">Kirim Pesan</button>
+                            <div id="alertKontak" class="alert alert-success mt-3 d-none" role="alert">Terima kasih! Pesan Anda sudah terkirim.</div>
+                            <div id="alertError" class="alert alert-danger mt-3 d-none" role="alert">Maaf, pesan gagal terkirim. Coba lagi ya.</div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 5. Footer -->
+    <footer class="footer-section text-center py-5">
+        <div class="container">
+            <p class="fst-italic mb-3">"Terus coba walau tau gagalnya berkali - kali"</p>
+            <div class="mb-3 fs-4">
+                <a href="https://github.com/beafull/" target="_blank" rel="noopener" class="mx-2" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=galizhdeandra@gmail.com&su=Halo%20dari%20Portofolio&body=Halo%20Galizh,%20" target="_blank" rel="noopener" class="mx-2" aria-label="Kirim email">
+                     <i class="bi bi-envelope-fill"></i>
+                </a>
+                <a href="https://www.instagram.com/g.lizhh?jplx=MWtoeGtyMWtmYXdscw%3D%3D&utm_source=qr" target="_blank" rel="noopener" class="mx-2" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            </div>
+            <p class="small mb-0">&copy; <span id="tahun">2026</span> Lizh. Program Studi Sistem Informasi - Fakultas Teknologi Informasi, Universitas kristen Satya Wacana. Pengantar Teknologi Informasi.</p>
+        </div>
+    </footer>
+
+    <!-- Tombol kembali ke atas -->
+    <button id="toTop" class="to-top" type="button" aria-label="Kembali ke atas"><i class="bi bi-arrow-up"></i></button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- JS Kustom -->
+    <script src="js/script.js"></script>
+</body>
+</html>
